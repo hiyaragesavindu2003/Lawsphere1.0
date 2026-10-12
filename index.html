@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14263F">
+  <title>Sign in | LawSphere</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <aside class="brand-panel">
+      <a class="brand" href="index.html" aria-label="LawSphere home">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span>LawSphere</span>
+      </a>
+      <div class="brand-message">
+        <p class="eyebrow">A clearer path to legal support</p>
+        <h1>Confident decisions start with the right counsel.</h1>
+        <p>Connect with trusted legal professionals and manage your next steps in one place.</p>
+      </div>
+      <div class="brand-footer">A more connected legal community</div>
+    </aside>
+
+    <section class="auth-content" aria-labelledby="login-title">
+      <div class="auth-card login-card">
+        <div class="mobile-brand">
+          <span class="brand-mark" aria-hidden="true">L</span>
+          <span>LawSphere</span>
+        </div>
+        <p class="eyebrow">Welcome back</p>
+        <h2 id="login-title">Sign in to your account</h2>
+        <p class="muted intro">Enter your details to continue to LawSphere.</p>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" placeholder="Enter your username" required>
+            <span class="field-error" id="username-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="login-password">Password</label>
+            <div class="password-control">
+              <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+              <button class="password-toggle" type="button" data-password-toggle="login-password" aria-pressed="false">Show</button>
+            </div>
+            <span class="field-error" id="login-password-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="login-role">I am a</label>
+            <select id="login-role" name="role" required>
+              <option value="client">Client</option>
+              <option value="lawyer">Lawyer</option>
+            </select>
+          </div>
+          <p class="prototype-note">Prototype note: username assignment is not yet defined and will need a backend integration decision.</p>
+          <button class="button button-primary button-wide" type="submit">Sign in <span aria-hidden="true">→</span></button>
+          <p class="form-message" id="login-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="auth-switch">Don’t have an account? <a id="create-account-link" href="register.html?role=client">Create account</a></p>
+      </div>
+      <p class="page-footnote">By continuing, you agree to LawSphere’s <a href="#" aria-label="Terms of service (prototype link)">Terms of Service</a> and <a href="#" aria-label="Privacy policy (prototype link)">Privacy Policy</a>.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14263F">
+  <title>Create an account | LawSphere</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/auth.js" defer></script>
+</head>
+<body class="form-page">
+  <header class="site-header">
+    <a class="brand brand-dark" href="index.html" aria-label="LawSphere home">
+      <span class="brand-mark" aria-hidden="true">L</span><span>LawSphere</span>
+    </a>
+    <p>Already have an account? <a href="index.html">Sign in</a></p>
+  </header>
+
+  <main class="registration-main">
+    <div class="registration-heading">
+      <p class="eyebrow">Join LawSphere</p>
+      <h1>Create your account</h1>
+      <p class="muted">Choose how you’ll use LawSphere to get started.</p>
+    </div>
+
+    <div class="role-picker" role="group" aria-label="Choose account type">
+      <button type="button" class="role-option" data-role-choice="client" aria-pressed="true">
+        <span class="role-icon" aria-hidden="true">◎</span>
+        <span><strong>Client</strong><small>Find legal support</small></span>
+      </button>
+      <button type="button" class="role-option" data-role-choice="lawyer" aria-pressed="false">
+        <span class="role-icon" aria-hidden="true">§</span>
+        <span><strong>Lawyer</strong><small>Grow your practice</small></span>
+      </button>
+    </div>
+
+    <section id="client-registration" class="form-card" aria-labelledby="client-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">Client account</p><h2 id="client-heading">Your details</h2></div>
+        <span class="required-legend"><span aria-hidden="true">*</span> Required</span>
+      </div>
+      <form id="client-form" novalidate>
+        <div class="field-grid">
+          <div class="field field-full">
+            <label for="client-name">Full name <span class="required-mark" aria-hidden="true">*</span></label>
+            <input id="client-name" name="fullName" autocomplete="name" required>
+            <span class="field-error" id="client-name-error"></span>
+          </div>
+          <div class="field">
+            <label for="client-email">Email address <span class="required-mark" aria-hidden="true">*</span></label>
+            <input id="client-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <span class="field-error" id="client-email-error"></span>
+          </div>
+          <div class="field">
+            <label for="client-phone">Phone number <span class="required-mark" aria-hidden="true">*</span></label>
+            <input id="client-phone" name="phone" type="tel" autocomplete="tel" placeholder="+94 77 123 4567" required>
+            <span class="field-error" id="client-phone-error"></span>
+          </div>
+          <div class="field field-full">
+            <label for="client-password">Password <span class="required-mark" aria-hidden="true">*</span></label>
+            <div class="password-control">
+              <input id="client-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+              <button class="password-toggle" type="button" data-password-toggle="client-password" aria-pressed="false">Show</button>
+            </div>
+            <span class="field-hint">At least 8 characters, with at least one letter and one number.</span>
+            <span class="field-error" id="client-password-error"></span>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="button button-primary" type="submit">Create client account <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="form-message" id="client-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="lawyer-registration" class="form-card" aria-labelledby="lawyer-heading" hidden>
+      <div class="section-heading">
+        <div><p class="eyebrow">Lawyer application</p><h2 id="lawyer-heading">Professional profile</h2></div>
+        <span class="required-legend"><span aria-hidden="true">*</span> Required</span>
+      </div>
+      <p class="notice"><span class="notice-icon" aria-hidden="true">i</span><span><strong>Admin approval is required</strong> before your lawyer profile appears in public listings.</span></p>
+      <form id="lawyer-form" novalidate>
+        <fieldset class="form-section">
+          <legend><span class="step-number">01</span> Personal details</legend>
+          <div class="field-grid">
+            <div class="field"><label for="lawyer-first-name">First name <span class="required-mark" aria-hidden="true">*</span></label><input id="lawyer-first-name" name="firstName" autocomplete="given-name" required><span class="field-error" id="lawyer-first-name-error"></span></div>
+            <div class="field"><label for="lawyer-last-name">Last name <span class="required-mark" aria-hidden="true">*</span></label><input id="lawyer-last-name" name="lastName" autocomplete="family-name" required><span class="field-error" id="lawyer-last-name-error"></span></div>
+            <div class="field"><label for="lawyer-email">Email address <span class="required-mark" aria-hidden="true">*</span></label><input id="lawyer-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><span class="field-error" id="lawyer-email-error"></span></div>
+            <div class="field"><label for="lawyer-phone">Phone number <span class="required-mark" aria-hidden="true">*</span></label><input id="lawyer-phone" name="phone" type="tel" autocomplete="tel" placeholder="+94 77 123 4567" required><span class="field-error" id="lawyer-phone-error"></span></div>
+            <div class="field"><label for="lawyer-dob">Date of birth <span class="required-mark" aria-hidden="true">*</span></label><input id="lawyer-dob" name="dateOfBirth" type="date" autocomplete="bday" required><span class="field-error" id="lawyer-dob-error"></span></div>
+            <div class="field"><label for="lawyer-gender">Gender <span class="optional-label">(optional)</span></label><select id="lawyer-gender" name="gender"><option value="">Select gender</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option></select></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend><span class="step-number">02</span> Professional details</legend>
+          <div class="field-grid">
+            <div class="field"><label for="licence-number">Licence number <span class="required-mark" aria-hidden="true">*</span></label><input id="licence-number" name="licenceNumber" required><span class="field-error" id="licence-number-error"></span></div>
+            <div class="field"><label for="bar-council-id">Bar council ID <span class="required-mark" aria-hidden="true">*</span></label><input id="bar-council-id" name="barCouncilId" required><span class="field-error" id="bar-council-id-error"></span></div>
+            <div class="field field-full">
+              <span class="field-label">Legal specializations <span class="required-mark" aria-hidden="true">*</span></span>
+              <div class="choice-grid">
+                <label class="check-option"><input type="checkbox" name="specializations" value="Civil Law"><span>Civil Law</span></label>
+                <label class="check-option"><input type="checkbox" name="specializations" value="Criminal Law"><span>Criminal Law</span></label>
+                <label class="check-option"><input type="checkbox" name="specializations" value="Family Law"><span>Family Law</span></label>
+                <label class="check-option"><input type="checkbox" name="specializations" value="Corporate Law"><span>Corporate Law</span></label>
+                <label class="check-option"><input type="checkbox" name="specializations" value="Property Law"><span>Property Law</span></label>
+                <label class="check-option"><input type="checkbox" name="specializations" value="Labour Law"><span>Labour Law</span></label>
+                <label class="check-option"><input type="checkbox" name="specializations" value="Immigration Law"><span>Immigration Law</span></label>
+                <label class="check-option"><input type="checkbox" name="specializations" value="Intellectual Property"><span>Intellectual Property</span></label>
+                <label class="check-option"><input type="checkbox" name="specializations" value="Other"><span>Other</span></label>
+              </div>
+              <span class="field-error" id="specializations-error"></span>
+            </div>
+            <div class="field field-full">
+              <span class="field-label">Languages spoken <span class="required-mark" aria-hidden="true">*</span></span>
+              <div class="choice-grid choice-grid-three">
+                <label class="check-option"><input type="checkbox" name="languages" value="Sinhala"><span>Sinhala</span></label>
+                <label class="check-option"><input type="checkbox" name="languages" value="Tamil"><span>Tamil</span></label>
+                <label class="check-option"><input type="checkbox" name="languages" value="English"><span>English</span></label>
+              </div>
+              <span class="field-error" id="languages-error"></span>
+            </div>
+            <div class="field"><label for="experience">Years of experience <span class="required-mark" aria-hidden="true">*</span></label><input id="experience" name="experience" type="number" min="0" step="1" inputmode="numeric" placeholder="e.g. 5" required><span class="field-error" id="experience-error"></span></div>
+            <div class="field"><label for="consultation-fee">Consultation fee per hour (LKR) <span class="required-mark" aria-hidden="true">*</span></label><input id="consultation-fee" name="consultationFee" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="e.g. 5000" required><span class="field-error" id="consultation-fee-error"></span></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend><span class="step-number">03</span> Location</legend>
+          <div class="field-grid">
+            <div class="field"><label for="district">District <span class="required-mark" aria-hidden="true">*</span></label><select id="district" name="district" required><option value="">Select district</option><option>Ampara</option><option>Anuradhapura</option><option>Badulla</option><option>Batticaloa</option><option>Colombo</option><option>Galle</option><option>Gampaha</option><option>Hambantota</option><option>Jaffna</option><option>Kalutara</option><option>Kandy</option><option>Kegalle</option><option>Kilinochchi</option><option>Kurunegala</option><option>Mannar</option><option>Matale</option><option>Matara</option><option>Monaragala</option><option>Mullaitivu</option><option>Nuwara Eliya</option><option>Polonnaruwa</option><option>Puttalam</option><option>Ratnapura</option><option>Trincomalee</option><option>Vavuniya</option></select><span class="field-error" id="district-error"></span></div>
+            <div class="field"><label for="city">City <span class="required-mark" aria-hidden="true">*</span></label><input id="city" name="city" autocomplete="address-level2" required><span class="field-error" id="city-error"></span></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend><span class="step-number">04</span> Account security</legend>
+          <div class="field field-full">
+            <label for="lawyer-password">Password <span class="required-mark" aria-hidden="true">*</span></label>
+            <div class="password-control"><input id="lawyer-password" name="password" type="password" autocomplete="new-password" minlength="8" required><button class="password-toggle" type="button" data-password-toggle="lawyer-password" aria-pressed="false">Show</button></div>
+            <span class="field-hint">At least 8 characters, with at least one letter and one number.</span>
+            <span class="field-error" id="lawyer-password-error"></span>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend><span class="step-number">05</span> Verification uploads</legend>
+          <p class="muted upload-intro">Upload clear JPG or PNG images. Each file must be 5 MB or smaller.</p>
+          <div class="upload-grid">
+            <div class="upload-field">
+              <label for="nic-front">NIC front image <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="nic-front" name="nicFront" type="file" accept="image/jpeg,image/png" required>
+              <span class="field-hint">JPG or PNG · Max 5 MB</span>
+              <span class="field-error" id="nic-front-error"></span>
+              <div class="image-preview" id="nic-front-preview" aria-live="polite"></div>
+            </div>
+            <div class="upload-field">
+              <label for="nic-back">NIC back image <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="nic-back" name="nicBack" type="file" accept="image/jpeg,image/png" required>
+              <span class="field-hint">JPG or PNG · Max 5 MB</span>
+              <span class="field-error" id="nic-back-error"></span>
+              <div class="image-preview" id="nic-back-preview" aria-live="polite"></div>
+            </div>
+            <div class="upload-field">
+              <label for="bar-image">Bar council ID image <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="bar-image" name="barImage" type="file" accept="image/jpeg,image/png" required>
+              <span class="field-hint">JPG or PNG · Max 5 MB</span>
+              <span class="field-error" id="bar-image-error"></span>
+              <div class="image-preview" id="bar-image-preview" aria-live="polite"></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <p class="prototype-note">This is a frontend prototype. Form details and selected documents are not sent or saved.</p>
+        <div class="form-actions">
+          <button class="button button-primary" type="submit">Submit lawyer application <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="form-message" id="lawyer-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <p class="registration-footnote">By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+  </main>
+</body>
+</html>
