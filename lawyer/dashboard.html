@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14263F">
+  <title>Lawyer Dashboard | LawSphere</title>
+  <link rel="stylesheet" href="../css/lawyer.css">
+  <script src="../js/lawyer-mock-data.js" defer></script>
+  <script src="../js/lawyer.js" defer></script>
+</head>
+<body class="lawyer-portal" data-page="dashboard">
+  <div class="mobile-overlay" aria-hidden="true"></div>
+  <div class="portal-shell">
+    <aside class="portal-sidebar" aria-label="Lawyer navigation">
+      <a class="portal-brand" href="dashboard.html" aria-label="LawSphere home">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span>LawSphere</span>
+      </a>
+      <p class="portal-subtitle">Lawyer Portal</p>
+
+      <nav class="portal-nav" aria-label="Main navigation">
+        <a href="dashboard.html" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="requests.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M14 3v6h6"></path><path d="M8 12h8M8 16h8"></path></svg>
+          <span>Consultation Requests</span>
+        </a>
+        <a href="consultations.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg>
+          <span>My Consultations</span>
+        </a>
+        <a href="profile.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+          <span>My Profile &amp; Fees</span>
+        </a>
+        <a href="earnings.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h13a3 3 0 0 1 3 3v7H7a4 4 0 0 1-4-4V7Z"></path><path d="M16 9h4v7h-4"></path><path d="M7 12h4"></path></svg>
+          <span>Earnings &amp; Settlements</span>
+        </a>
+        <a href="reviews.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.82 5.72 6.31.92-4.57 4.46 1.08 6.29L12 0l-5.64 2.96 1.08-6.29L2.87 9.64l6.31-.92L12 3Z"></path></svg>
+          <span>Client Reviews</span>
+        </a>
+        <a href="notifications.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>
+          <span>Notifications</span>
+          <span class="nav-count" aria-label="2 unread notifications">2</span>
+        </a>
+      </nav>
+
+      <p class="portal-subtitle">Account</p>
+      <nav class="portal-nav" aria-label="Account navigation">
+        <a href="settings.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.84l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15.4 19a1.7 1.7 0 0 0-1.02.7l-.25.45a2 2 0 0 1-3.26 0l-.25-.45A1.7 1.7 0 0 0 9.6 19a1.7 1.7 0 0 0-1.84.35l-.06.06A2 2 0 1 1 4.87 16.6l.06-.06A1.7 1.7 0 0 0 5.28 15a1.7 1.7 0 0 0-.7-1.02l-.45-.25a2 2 0 0 1 0-3.26l.45-.25A1.7 1.7 0 0 0 5.28 9.6a1.7 1.7 0 0 0-.35-1.84l-.06-.06A2 2 0 1 1 7.7 4.87l.06.06A1.7 1.7 0 0 0 9.6 5.28a1.7 1.7 0 0 0 1.02-.7l.25-.45a2 2 0 0 1 3.26 0l.25.45A1.7 1.7 0 0 0 14.4 5.28a1.7 1.7 0 0 0 1.84.35l.06-.06A2 2 0 1 1 19.13 7.7l-.06.06A1.7 1.7 0 0 0 18.72 9.6a1.7 1.7 0 0 0 .7 1.02l.45.25a2 2 0 0 1 0 3.26l-.45.25A1.7 1.7 0 0 0 18.72 14.4Z"></path></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="lawyer-profile-card">
+          <span class="avatar blue">AS</span>
+          <div>
+            <strong>Anura Samarasinghe</strong>
+            <span>Senior Lawyer</span>
+          </div>
+        </div>
+        <nav class="portal-nav" aria-label="Session navigation">
+          <a href="../index.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17 5 12l5-5"></path><path d="M5 12h11a3 3 0 0 1 0 6h-2"></path></svg>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="portal-main">
+      <header class="portal-topbar">
+        <div class="topbar-leading">
+          <button class="icon-button mobile-menu-button" type="button" data-action="toggle-sidebar" aria-label="Open navigation menu" aria-controls="portal-sidebar" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+          <label class="top-search" aria-label="Global search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 5 5"></path></svg>
+            <input type="search" placeholder="Search clients, requests, or cases" aria-label="Search" />
+          </label>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>
+            <span class="nav-count">2</span>
+          </button>
+          <div class="topbar-profile">
+            <button class="profile-trigger" type="button" aria-label="Open account menu" aria-expanded="false">
+              <span class="avatar blue">AS</span>
+              <span>
+                <span class="profile-trigger-name">Anura</span>
+                <span class="profile-trigger-role">Lawyer</span>
+              </span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+            </button>
+            <div class="profile-menu" aria-label="User menu">
+              <a href="profile.html">My profile</a>
+              <a href="settings.html">Settings</a>
+              <a href="../index.html">Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="portal-content">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h1>Welcome back, Attorney!</h1>
+          </div>
+          <p>Today: <strong>Thursday, 16 October 2026</strong></p>
+        </div>
+
+        <section class="welcome-banner" aria-labelledby="welcome-title">
+          <div class="welcome-copy">
+            <p class="eyebrow">Consultation summary</p>
+            <h1 id="welcome-title">You are managing 14 upcoming consultations.</h1>
+            <p>Keep your schedule, client communication, and documentation moving smoothly.</p>
+          </div>
+          <div class="welcome-meta">
+            <span class="avatar blue">AS</span>
+            <span>Attorney on duty</span>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Lawyer dashboard statistics">
+          <article class="summary-card">
+            <span class="label">Total Consultations</span>
+            <strong id="stat-total-consultations">184</strong>
+            <small>Across all active matters</small>
+          </article>
+          <article class="summary-card">
+            <span class="label">Upcoming Consultations</span>
+            <strong id="stat-upcoming-consultations">14</strong>
+            <small>Booked in the next 14 days</small>
+          </article>
+          <article class="summary-card">
+            <span class="label">Pending Requests</span>
+            <strong id="stat-pending-requests">7</strong>
+            <small>Needing review or response</small>
+          </article>
+          <article class="summary-card">
+            <span class="label">Completed Consultations</span>
+            <strong id="stat-completed-consultations">126</strong>
+            <small>Closed and recorded</small>
+          </article>
+        </section>
+
+        <section class="card-grid">
+          <article class="portal-card">
+            <div class="card-head">
+              <div>
+                <h2>Upcoming Consultations</h2>
+                <p>Scheduled appointments for this week</p>
+              </div>
+              <a class="link-btn" href="consultations.html">View all</a>
+            </div>
+            <div id="upcoming-consultations-list" class="list-stack"></div>
+          </article>
+
+          <article class="portal-card">
+            <div class="card-head">
+              <div>
+                <h2>New Consultation Requests</h2>
+                <p>Needs prompt review</p>
+              </div>
+              <a class="link-btn" href="requests.html">Review queue</a>
+            </div>
+            <div id="new-request-list" class="list-stack"></div>
+          </article>
+        </section>
+
+        <section class="card-grid" style="margin-top: 20px;">
+          <article class="portal-card">
+            <div class="card-head">
+              <div>
+                <h2>Earnings Overview</h2>
+                <p>Current cycle summary</p>
+              </div>
+              <a class="link-btn" href="earnings.html">All earnings</a>
+            </div>
+            <div id="earnings-summary" class="summary-list"></div>
+          </article>
+
+          <article class="portal-card">
+            <div class="card-head">
+              <div>
+                <h2>Recent Activity</h2>
+                <p>Latest professional updates</p>
+              </div>
+            </div>
+            <div id="recent-activity-list" class="list-stack"></div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

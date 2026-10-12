@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14263F">
+  <title>My Consultations | LawSphere</title>
+  <link rel="stylesheet" href="../css/lawyer.css">
+  <script src="../js/lawyer-mock-data.js" defer></script>
+  <script src="../js/lawyer.js" defer></script>
+</head>
+<body class="lawyer-portal" data-page="consultations">
+  <div class="mobile-overlay" aria-hidden="true"></div>
+  <div class="portal-shell">
+    <aside class="portal-sidebar" aria-label="Lawyer navigation">
+      <a class="portal-brand" href="dashboard.html" aria-label="LawSphere home"><span class="brand-mark" aria-hidden="true">L</span><span>LawSphere</span></a>
+      <p class="portal-subtitle">Lawyer Portal</p>
+      <nav class="portal-nav" aria-label="Main navigation">
+        <a href="dashboard.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg><span>Dashboard</span></a>
+        <a href="requests.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M14 3v6h6"></path><path d="M8 12h8M8 16h8"></path></svg><span>Consultation Requests</span></a>
+        <a href="consultations.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg><span>My Consultations</span></a>
+        <a href="profile.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>My Profile &amp; Fees</span></a>
+        <a href="earnings.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h13a3 3 0 0 1 3 3v7H7a4 4 0 0 1-4-4V7Z"></path><path d="M16 9h4v7h-4"></path><path d="M7 12h4"></path></svg><span>Earnings &amp; Settlements</span></a>
+        <a href="reviews.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.82 5.72 6.31.92-4.57 4.46 1.08 6.29L12 0l-5.64 2.96 1.08-6.29L2.87 9.64l6.31-.92L12 3Z"></path></svg><span>Client Reviews</span></a>
+        <a href="notifications.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg><span>Notifications</span><span class="nav-count">2</span></a>
+      </nav>
+      <p class="portal-subtitle">Account</p>
+      <nav class="portal-nav" aria-label="Account navigation">
+        <a href="settings.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.84l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15.4 19a1.7 1.7 0 0 0-1.02.7l-.25.45a2 2 0 0 1-3.26 0l-.25-.45A1.7 1.7 0 0 0 9.6 19a1.7 1.7 0 0 0-1.84.35l-.06.06A2 2 0 1 1 4.87 16.6l.06-.06A1.7 1.7 0 0 0 5.28 15a1.7 1.7 0 0 0-.7-1.02l-.45-.25a2 2 0 0 1 0-3.26l.45-.25A1.7 1.7 0 0 0 5.28 9.6a1.7 1.7 0 0 0-.35-1.84l-.06-.06A2 2 0 1 1 7.7 4.87l.06.06A1.7 1.7 0 0 0 9.6 5.28a1.7 1.7 0 0 0 1.02-.7l.25-.45a2 2 0 0 1 3.26 0l.25.45A1.7 1.7 0 0 0 14.4 5.28a1.7 1.7 0 0 0 1.84.35l.06-.06A2 2 0 1 1 19.13 7.7l-.06.06A1.7 1.7 0 0 0 18.72 9.6a1.7 1.7 0 0 0 .7 1.02l.45.25a2 2 0 0 1 0 3.26l-.45.25A1.7 1.7 0 0 0 18.72 14.4Z"></path></svg><span>Settings</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="lawyer-profile-card"><span class="avatar blue">AS</span><div><strong>Anura Samarasinghe</strong><span>Senior Lawyer</span></div></div>
+        <nav class="portal-nav" aria-label="Session navigation"><a href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17 5 12l5-5"></path><path d="M5 12h11a3 3 0 0 1 0 6h-2"></path></svg><span>Logout</span></a></nav>
+      </div>
+    </aside>
+
+    <main class="portal-main">
+      <header class="portal-topbar">
+        <div class="topbar-leading">
+          <button class="icon-button mobile-menu-button" type="button" data-action="toggle-sidebar" aria-label="Open navigation menu" aria-controls="portal-sidebar" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+          <label class="top-search" aria-label="Search consultations">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 5 5"></path></svg>
+            <input id="consultation-search" type="search" placeholder="Search client or booking ID" aria-label="Search consultations" />
+          </label>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg></button>
+          <div class="topbar-profile"><button class="profile-trigger" type="button" aria-label="Open account menu" aria-expanded="false"><span class="avatar blue">AS</span><span><span class="profile-trigger-name">Anura</span><span class="profile-trigger-role">Lawyer</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg></button><div class="profile-menu" aria-label="User menu"><a href="profile.html">My profile</a><a href="settings.html">Settings</a><a href="../index.html">Logout</a></div></div>
+        </div>
+      </header>
+
+      <div class="portal-content">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">Consultations</p>
+            <h1>My Consultations</h1>
+          </div>
+          <p>Track upcoming, confirmed, and completed matters.</p>
+        </div>
+
+        <section class="portal-card">
+          <div class="filters">
+            <div class="filter-field">
+              <label for="consultation-status-filter">Status</label>
+              <select id="consultation-status-filter">
+                <option value="All">All</option>
+                <option value="Awaiting Payment">Awaiting Payment</option>
+                <option value="Confirmed">Confirmed</option>
+                <option value="Completed">Completed</option>
+                <option value="Cancelled">Cancelled</option>
+              </select>
+            </div>
+          </div>
+
+          <table class="data-table" aria-label="Consultation list">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Client</th>
+                <th>Scheduled</th>
+                <th>Method</th>
+                <th>Duration</th>
+                <th>Fee</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="consultation-table-body"></tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal" id="consultation-detail-modal" role="dialog" aria-modal="true" aria-labelledby="consultation-detail-title">
+    <div class="modal-card">
+      <div class="modal-head"><h3 id="consultation-detail-title">Consultation Details</h3><button class="close-modal" type="button" data-close-modal="consultation-detail-modal" aria-label="Close dialog">×</button></div>
+      <div class="modal-body">
+        <p><strong>Booking ID:</strong> <span id="consultation-detail-id"></span></p>
+        <p><strong>Client:</strong> <span id="consultation-detail-client"></span></p>
+        <p><strong>Scheduled:</strong> <span id="consultation-detail-date"></span></p>
+        <p><strong>Method:</strong> <span id="consultation-detail-method"></span></p>
+        <p><strong>Duration:</strong> <span id="consultation-detail-duration"></span></p>
+        <p><strong>Fee:</strong> <span id="consultation-detail-fee"></span></p>
+        <p><strong>Status:</strong> <span id="consultation-detail-status"></span></p>
+        <p><strong>Meeting link:</strong> <span id="consultation-detail-link"></span></p>
+      </div>
+      <div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal="consultation-detail-modal">Close</button></div>
+    </div>
+  </div>
+
+  <div class="modal" id="complete-consultation-modal" role="dialog" aria-modal="true" aria-labelledby="complete-consultation-title">
+    <div class="modal-card">
+      <div class="modal-head"><h3 id="complete-consultation-title">Mark Consultation as Completed</h3><button class="close-modal" type="button" data-close-modal="complete-consultation-modal" aria-label="Close dialog">×</button></div>
+      <form id="complete-consultation-form">
+        <input type="hidden" id="complete-consultation-id" />
+        <div class="modal-body">
+          <p>Marking a consultation as completed should only happen after the session has actually taken place. This is a prototype workflow.</p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" type="button" data-close-modal="complete-consultation-modal">Cancel</button>
+          <button class="btn btn-primary" type="submit">Confirm Completion</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="cancel-consultation-modal" role="dialog" aria-modal="true" aria-labelledby="cancel-consultation-title">
+    <div class="modal-card">
+      <div class="modal-head"><h3 id="cancel-consultation-title">Request Cancellation</h3><button class="close-modal" type="button" data-close-modal="cancel-consultation-modal" aria-label="Close dialog">×</button></div>
+      <form id="cancel-consultation-form">
+        <input type="hidden" id="cancel-consultation-id" />
+        <div class="modal-body">
+          <p>Refund eligibility and approval are handled by the administrator in a future backend workflow. This is not an automatic refund.</p>
+          <div class="field">
+            <label for="cancel-reason">Reason for cancellation</label>
+            <textarea id="cancel-reason" placeholder="Optional reason"></textarea>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" type="button" data-close-modal="cancel-consultation-modal">Cancel</button>
+          <button class="btn btn-danger" type="submit">Submit Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
