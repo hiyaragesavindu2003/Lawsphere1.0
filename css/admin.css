@@ -55,18 +55,7 @@ body.admin-portal :focus-visible { outline: 3px solid rgba(37, 99, 235, 0.25); o
   letter-spacing: -0.04em;
 }
 
-.admin-brand .brand-mark {
-  display: inline-grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border-radius: 10px 10px 10px 3px;
-  border: 1px solid rgba(215, 166, 75, 0.7);
-  color: var(--gold);
-  background: rgba(215, 166, 75, 0.12);
-  font-size: 20px;
-  font-weight: 700;
-}
+.admin-brand .brand-logo { width: 180px; max-width: 100%; }
 
 .admin-subtitle {
   margin: 0 10px 10px;
@@ -255,6 +244,17 @@ body.admin-portal :focus-visible { outline: 3px solid rgba(37, 99, 235, 0.25); o
 }
 
 .top-search input::placeholder { color: #99a6b5; }
+
+.top-search svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
 
 .topbar-profile {
   position: relative;

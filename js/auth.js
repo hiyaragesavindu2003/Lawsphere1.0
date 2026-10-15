@@ -179,7 +179,12 @@
         loginForm.querySelector('[aria-invalid="true"]')?.focus();
         return;
       }
-      message.textContent = "Prototype only: sign-in is not connected to an authentication service.";
+      const role = document.getElementById("login-role").value;
+      const dashboard = role === "lawyer" ? "lawyer/dashboard.html" : "client/dashboard.html";
+      message.textContent = `Prototype demo: opening the ${role} portal. No account was authenticated.`;
+      window.setTimeout(() => {
+        window.location.href = dashboard;
+      }, 650);
     });
   }
 

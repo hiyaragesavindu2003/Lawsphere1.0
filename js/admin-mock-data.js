@@ -137,11 +137,6 @@ window.AdminPortalMock = {
     { id: "PMT-9154", bookingId: "BK-3102", client: "Madhavi Silva", lawyer: "Kavindi Ranatunga", gross: 11000, commission: 1100, net: 9900, paidOn: "2026-10-18", status: "Pending", reference: "TXN-104720" },
     { id: "PMT-9155", bookingId: "BK-3101", client: "Nimal Perera", lawyer: "Anura Samarasinghe", gross: 12000, commission: 1200, net: 10800, paidOn: "2026-10-12", status: "Failed", reference: "TXN-104860" }
   ],
-  refunds: [
-    { id: "REF-4011", bookingId: "BK-3106", client: "Tharindu Karunaratne", lawyer: "Anura Samarasinghe", requestedBy: "Client", reason: "Consultation was cancelled by the client before payment confirmation.", originalAmount: 14500, requestedAmount: 14500, requestDate: "2026-10-20", status: "Pending Review" },
-    { id: "REF-4012", bookingId: "BK-3103", client: "Dinesh Wickramasinghe", lawyer: "Anura Samarasinghe", requestedBy: "Lawyer", reason: "Alternative time was rejected by client and booking was not completed.", originalAmount: 13000, requestedAmount: 6500, requestDate: "2026-10-15", status: "Processing" },
-    { id: "REF-4013", bookingId: "BK-3102", client: "Madhavi Silva", lawyer: "Kavindi Ranatunga", requestedBy: "Client", reason: "Payment was stalled before final confirmation.", originalAmount: 11000, requestedAmount: 11000, requestDate: "2026-10-19", status: "Approved" }
-  ],
   settlements: [
     { id: "SET-2026-08", lawyer: "Anura Samarasinghe", period: "Aug 2026", gross: 48600, commission: 4860, refundAdjustment: 0, recoverableBalance: 0, net: 43740, status: "Pending", date: "2026-09-03" },
     { id: "SET-2026-09", lawyer: "Kavindi Ranatunga", period: "Sep 2026", gross: 43200, commission: 4320, refundAdjustment: 650, recoverableBalance: 650, net: 38230, status: "Draft", date: "2026-10-02" },

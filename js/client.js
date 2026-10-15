@@ -125,7 +125,7 @@
       <a class="skip-link" href="#main-content">Skip to main content</a>
       <div class="mobile-overlay" data-action="close-sidebar" aria-hidden="true"></div>
       <aside class="portal-sidebar" id="portal-sidebar" aria-label="Client navigation">
-        <a class="portal-brand" href="dashboard.html"><span class="brand-mark" aria-hidden="true">L</span><span>LawSphere</span></a>
+        <a class="portal-brand" href="dashboard.html"><img class="brand-logo" src="../assets/images/lawsphere-logo.png" alt="LawSphere"></a>
         <p class="sidebar-caption">Workspace</p>
         <nav class="portal-nav" aria-label="Main navigation">${navItems.slice(0, 6).map(navLink).join("")}</nav>
         <p class="sidebar-caption">Account</p>

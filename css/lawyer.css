@@ -59,18 +59,7 @@ body.lawyer-portal :focus-visible {
   letter-spacing: -0.04em;
 }
 
-.portal-brand .brand-mark {
-  display: inline-grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border-radius: 10px 10px 10px 3px;
-  border: 1px solid rgba(215, 166, 75, 0.7);
-  color: var(--gold);
-  background: rgba(215, 166, 75, 0.12);
-  font-size: 20px;
-  font-weight: 700;
-}
+.portal-brand .brand-logo { width: 180px; max-width: 100%; }
 
 .portal-subtitle {
   margin: 0 10px 10px;

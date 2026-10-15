@@ -623,65 +623,6 @@
     }
   }
 
-  function renderRefunds() {
-    const rows = Array.isArray(mock.refunds) ? mock.refunds : [];
-    const tableBody = document.getElementById("refunds-table-body");
-    const statusFilter = document.getElementById("refund-status-filter");
-    const searchField = document.getElementById("refunds-search");
-
-    function applyFilters() {
-      const term = (searchField ? searchField.value : "").trim().toLowerCase();
-      const statusValue = statusFilter ? statusFilter.value : "All";
-      const filtered = rows.filter((row) => {
-        const matchesStatus = statusValue === "All" || row.status === statusValue;
-        const matchesTerm = !term || [row.id, row.bookingId, row.client, row.lawyer].join(" ").toLowerCase().includes(term);
-        return matchesStatus && matchesTerm;
-      });
-
-      if (!tableBody) return;
-      if (!filtered.length) {
-        tableBody.innerHTML = '<tr><td colspan="10"><div class="empty-state">No refund requests match the current filter.</div></td></tr>';
-        return;
-      }
-
-      tableBody.innerHTML = filtered.map((row) => `
-        <tr>
-          <td>${row.id}</td>
-          <td>${row.bookingId}</td>
-          <td>${row.client}</td>
-          <td>${row.lawyer}</td>
-          <td>${row.requestedBy}</td>
-          <td>${formatMoney(row.originalAmount)}</td>
-          <td>${formatMoney(row.requestedAmount)}</td>
-          <td>${formatDate(row.requestDate)}</td>
-          <td>${renderStatus(row.status)}</td>
-          <td>
-            <div class="table-actions">
-              <button class="btn btn-success" type="button" data-refund-action="approve" data-refund-id="${row.id}">Approve</button>
-              <button class="btn btn-danger" type="button" data-refund-action="reject" data-refund-id="${row.id}">Reject</button>
-            </div>
-          </td>
-        </tr>
-      `).join("");
-
-      tableBody.querySelectorAll("[data-refund-action]").forEach((button) => {
-        button.addEventListener("click", () => {
-          const id = button.getAttribute("data-refund-id");
-          const action = button.getAttribute("data-refund-action");
-          const refund = rows.find((item) => item.id === id);
-          if (!refund) return;
-          refund.status = action === "approve" ? "Approved" : "Rejected";
-          renderRefunds();
-          showToast(action === "approve" ? "Refund approved in the prototype." : "Refund rejected in the prototype.", action === "approve" ? "success" : "error");
-        });
-      });
-    }
-
-    if (searchField) searchField.addEventListener("input", applyFilters);
-    if (statusFilter) statusFilter.addEventListener("change", applyFilters);
-    applyFilters();
-  }
-
   function renderSettlements() {
     const rows = Array.isArray(mock.settlements) ? mock.settlements : [];
     const totalPayables = rows.reduce((sum, row) => sum + Number(row.gross || 0), 0);
@@ -761,46 +702,6 @@
     applyFilters();
   }
 
-  function renderReports() {
-    const bookingActivity = Array.isArray(mock.bookingActivity) ? mock.bookingActivity : [];
-    const chart = document.getElementById("report-chart");
-    if (chart && bookingActivity.length) {
-      const max = Math.max(...bookingActivity.map((item) => item.count));
-      chart.innerHTML = bookingActivity.map((item) => `
-        <div class="bar-column">
-          <div class="bar-shell"><div class="bar alt" style="height:${Math.max(18, (item.count / max) * 100)}%"></div></div>
-          <span class="bar-label">${item.month}</span>
-        </div>
-      `).join("");
-    }
-
-    const summary = {
-      "report-total-clients": formatNumber(mock.stats?.totalClients || 0),
-      "report-total-lawyers": formatNumber(mock.stats?.totalLawyers || 0),
-      "report-consultations": formatNumber(mock.stats?.totalConsultations || 0),
-      "report-commission": formatMoney(mock.stats?.platformCommissionRevenue || 0)
-    };
-
-    Object.entries(summary).forEach(([id, value]) => {
-      const element = document.getElementById(id);
-      if (element) element.textContent = value;
-    });
-
-    const indicator = document.getElementById("report-growth-rate");
-    if (indicator) indicator.textContent = `${Number(mock.revenueComparison?.monthlyChange || 0).toFixed(1)}%`;
-
-    const list = document.getElementById("report-insights-list");
-    if (list) {
-      list.innerHTML = [
-        { title: "Consultation volume", value: formatMoney(mock.revenueComparison?.consultationVolume || 0) },
-        { title: "Gross commission", value: formatMoney(mock.revenueComparison?.commissionRevenue || 0) },
-        { title: "Pending lawyer verifications", value: mock.stats?.pendingLawyerApprovals || 0 }
-      ].map((item) => `
-        <div class="kpi-row"><span>${item.title}</span><strong>${item.value}</strong></div>
-      `).join("");
-    }
-  }
-
   function renderNotifications() {
     const rows = Array.isArray(mock.notifications) ? mock.notifications : [];
     const list = document.getElementById("notifications-list");
@@ -867,10 +768,8 @@
       users: renderUsers,
       bookings: renderBookings,
       payments: renderPayments,
-      refunds: renderRefunds,
       settlements: renderSettlements,
       reviews: renderReviews,
-      reports: renderReports,
       notifications: renderNotifications,
       settings: renderSettings
     };

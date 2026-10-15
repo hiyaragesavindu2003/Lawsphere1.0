@@ -28,6 +28,7 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 .brand-panel::after { position: absolute; right: -140px; bottom: -165px; width: 430px; height: 430px; border: 1px solid rgba(215, 166, 75, .24); border-radius: 50%; box-shadow: 0 0 0 42px rgba(255,255,255,.025), 0 0 0 84px rgba(255,255,255,.02); content: ""; }
 .brand { display: inline-flex; width: max-content; align-items: center; gap: 11px; color: inherit; font-size: 20px; font-weight: 700; letter-spacing: -.04em; }
 .brand:hover { text-decoration: none; }
+.brand-logo { display: block; width: min(190px, 100%); height: auto; padding: 5px; border-radius: 6px; background: #fff; }
 .brand-mark { display: inline-grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(215,166,75,.65); border-radius: 11px 11px 11px 3px; color: var(--gold); font-size: 21px; font-weight: 700; }
 .brand-message { position: relative; z-index: 1; max-width: 440px; margin: auto 0; padding: 72px 0; }
 .brand-message .eyebrow { color: #EBCB8C; }
@@ -135,7 +136,8 @@ h1, h2, p { margin-top: 0; }
   .brand-panel { display: none; }
   .auth-content { min-height: 100vh; justify-content: flex-start; padding: 28px 18px 23px; }
   .auth-card { margin: auto 0; padding: 28px 23px 25px; }
-  .mobile-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 35px; font-size: 18px; font-weight: 700; }
+  .mobile-brand { display: flex; align-items: center; margin-bottom: 35px; }
+  .mobile-brand .brand-logo { width: min(176px, 100%); }
   .mobile-brand .brand-mark { width: 32px; height: 32px; font-size: 19px; }
   .auth-card h2 { font-size: 24px; }
   .page-footnote { margin-top: 20px; }
