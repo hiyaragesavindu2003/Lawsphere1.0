@@ -25,18 +25,19 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 
 .auth-layout { min-height: 100vh; display: grid; grid-template-columns: minmax(320px, .88fr) 1.12fr; }
 .brand-panel { position: relative; display: flex; flex-direction: column; min-height: 100vh; padding: 44px clamp(30px, 6vw, 92px); overflow: hidden; color: #fff; background: var(--navy); }
-.auth-page .brand-panel { background: linear-gradient(110deg, #14263F 0%, #1F3E66 72%, #28528A 100%); }
+.auth-page .brand-panel { color: var(--navy); background: #D8EDF7; }
 .brand-panel::after { position: absolute; right: -140px; bottom: -165px; width: 430px; height: 430px; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; box-shadow: 0 0 0 42px rgba(255,255,255,.035), 0 0 0 84px rgba(255,255,255,.025); content: ""; }
+.auth-page .brand-panel::after { border-color: rgba(20,38,63,.08); box-shadow: 0 0 0 42px rgba(20,38,63,.035), 0 0 0 84px rgba(20,38,63,.025); }
 .brand { display: inline-flex; width: max-content; align-items: center; gap: 11px; color: inherit; font-size: 20px; font-weight: 700; letter-spacing: -.04em; }
 .brand:hover { text-decoration: none; }
 .brand-logo { display: block; width: min(190px, 100%); height: auto; padding: 5px; border-radius: 6px; background: #fff; }
 .auth-page .brand-logo { padding: 0; border-radius: 0; background: transparent; }
 .brand-mark { display: inline-grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(215,166,75,.65); border-radius: 11px 11px 11px 3px; color: var(--gold); font-size: 21px; font-weight: 700; }
 .brand-message { position: relative; z-index: 1; max-width: 440px; margin: auto 0; padding: 72px 0; }
-.brand-message .eyebrow { color: #EBCB8C; }
+.brand-message .eyebrow { color: #8A5A12; }
 .brand-message h1 { margin: 15px 0 20px; font-size: clamp(36px, 4vw, 54px); line-height: 1.13; letter-spacing: -.045em; }
-.brand-message > p:last-child { max-width: 380px; color: #C2CCDA; font-size: 16px; line-height: 1.75; }
-.brand-footer { color: #AAB7C8; font-size: 13px; }
+.brand-message > p:last-child { max-width: 380px; color: #42566F; font-size: 16px; line-height: 1.75; }
+.brand-footer { color: #53657D; font-size: 13px; }
 .auth-content { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 56px 28px 32px; }
 .auth-card { width: min(100%, 445px); padding: 44px 42px 32px; border: 1px solid #E9EEF5; border-radius: 16px; background: #fff; box-shadow: 0 14px 50px rgba(20,38,63,.06); }
 .eyebrow { margin: 0 0 9px; color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
