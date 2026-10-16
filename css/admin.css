@@ -383,8 +383,8 @@ body.admin-portal :focus-visible { outline: 3px solid rgba(37, 99, 235, 0.25); o
   padding: 28px 32px;
   overflow: hidden;
   border-radius: 12px;
-  color: #fff;
-  background: linear-gradient(110deg, #14263f 0%, #1f3e66 72%, #28528a 100%);
+  color: var(--navy);
+  background: #E8F6FC;
 }
 
 .welcome-banner::after {
@@ -393,9 +393,9 @@ body.admin-portal :focus-visible { outline: 3px solid rgba(37, 99, 235, 0.25); o
   right: 21%;
   width: 280px;
   height: 280px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 50%;
-  box-shadow: 0 0 0 36px rgba(255, 255, 255, 0.035), 0 0 0 72px rgba(255, 255, 255, 0.025);
+  box-shadow: 0 0 0 36px rgba(37, 99, 235, 0.035), 0 0 0 72px rgba(37, 99, 235, 0.025);
   content: "";
 }
 
@@ -407,14 +407,18 @@ body.admin-portal :focus-visible { outline: 3px solid rgba(37, 99, 235, 0.25); o
 
 .welcome-copy h2 {
   margin: 0 0 9px;
-  color: #fff;
+  color: var(--navy);
   font-size: clamp(24px, 2vw, 30px);
   letter-spacing: -0.04em;
 }
 
+.welcome-copy .eyebrow {
+  color: var(--blue);
+}
+
 .welcome-copy p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.82);
+  color: #465E78;
   line-height: 1.7;
 }
 
@@ -424,10 +428,10 @@ body.admin-portal :focus-visible { outline: 3px solid rgba(37, 99, 235, 0.25); o
   gap: 10px;
   margin-left: auto;
   padding: 10px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #edf3ff;
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--navy);
 }
 
 .summary-grid {

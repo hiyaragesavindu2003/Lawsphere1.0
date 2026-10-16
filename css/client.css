@@ -71,12 +71,12 @@ body.client-portal { min-width: 0; min-height: 100vh; background: var(--portal-b
 .button-danger { color: #B42318; background: #FFF0EE; }
 .button-danger:hover { background: #FFE5E1; }
 .button:disabled { opacity: .55; cursor: not-allowed; transform: none; }
-.welcome-banner { position: relative; display: flex; min-height: 172px; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 20px; padding: 28px 32px; overflow: hidden; border-radius: 12px; color: #fff; background: linear-gradient(110deg,#14263F 0%,#1F3E66 72%,#28528A 100%); }
-.welcome-banner::after { position: absolute; top: -98px; right: 23%; width: 280px; height: 280px; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; box-shadow: 0 0 0 36px rgba(255,255,255,.035), 0 0 0 72px rgba(255,255,255,.025); content: ""; }
+.welcome-banner { position: relative; display: flex; min-height: 172px; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 20px; padding: 28px 32px; overflow: hidden; border-radius: 12px; color: var(--navy); background: #E8F6FC; }
+.welcome-banner::after { position: absolute; top: -98px; right: 23%; width: 280px; height: 280px; border: 1px solid rgba(37,99,235,.14); border-radius: 50%; box-shadow: 0 0 0 36px rgba(37,99,235,.035), 0 0 0 72px rgba(37,99,235,.025); content: ""; }
 .welcome-copy { position: relative; z-index: 1; }
-.welcome-copy .eyebrow { margin-bottom: 10px; color: #EDC878; }
-.welcome-copy h1 { margin: 0 0 9px; color: #fff; font-size: clamp(25px, 3vw, 33px); letter-spacing: -.04em; }
-.welcome-copy p { max-width: 570px; margin: 0; color: #CFD8E5; font-size: 12px; line-height: 1.7; }
+.welcome-copy .eyebrow { margin-bottom: 10px; color: var(--blue); }
+.welcome-copy h1 { margin: 0 0 9px; color: var(--navy); font-size: clamp(25px, 3vw, 33px); letter-spacing: -.04em; }
+.welcome-copy p { max-width: 570px; margin: 0; color: #465E78; font-size: 12px; line-height: 1.7; }
 .welcome-action { position: relative; z-index: 1; flex: 0 0 auto; }
 .welcome-action .button { min-height: 43px; color: var(--navy); background: #fff; }
 .welcome-action .button:hover { background: #F0F4FA; }

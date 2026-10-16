@@ -252,19 +252,15 @@
     const tableBody = document.getElementById("request-table-body");
     if (!tableBody) return;
 
-    const searchInput = document.getElementById("request-search");
     const statusFilter = document.getElementById("request-status-filter");
-    const query = (searchInput?.value || "").trim().toLowerCase();
     const currentStatus = statusFilter?.value || "All";
 
-    const filtered = mock.requests.filter((item) => {
-      const matchesQuery = !query || item.client.toLowerCase().includes(query) || item.id.toLowerCase().includes(query);
-      const matchesStatus = currentStatus === "All" || item.status === currentStatus;
-      return matchesQuery && matchesStatus;
-    });
+    const filtered = mock.requests.filter((item) =>
+      currentStatus === "All" || item.status === currentStatus
+    );
 
     if (!filtered.length) {
-      tableBody.innerHTML = '<tr><td colspan="8"><div class="empty-state">No consultation requests match the current search or filter.</div></td></tr>';
+      tableBody.innerHTML = '<tr><td colspan="8"><div class="empty-state">No consultation requests match the current filter.</div></td></tr>';
       return;
     }
 
@@ -354,16 +350,12 @@
     const tableBody = document.getElementById("consultation-table-body");
     if (!tableBody) return;
 
-    const queryInput = document.getElementById("consultation-search");
     const statusFilter = document.getElementById("consultation-status-filter");
-    const query = (queryInput?.value || "").trim().toLowerCase();
     const statusValue = statusFilter?.value || "All";
 
-    const filtered = mock.consultations.filter((item) => {
-      const matchesQuery = !query || item.client.toLowerCase().includes(query) || item.id.toLowerCase().includes(query);
-      const matchesStatus = statusValue === "All" || item.status === statusValue;
-      return matchesQuery && matchesStatus;
-    });
+    const filtered = mock.consultations.filter((item) =>
+      statusValue === "All" || item.status === statusValue
+    );
 
     if (!filtered.length) {
       tableBody.innerHTML = '<tr><td colspan="8"><div class="empty-state">No consultations match the current filter.</div></td></tr>';
@@ -670,17 +662,13 @@
 
     if (page === "requests") {
       initRequests();
-      const searchInput = document.getElementById("request-search");
       const statusFilter = document.getElementById("request-status-filter");
-      searchInput?.addEventListener("input", initRequests);
       statusFilter?.addEventListener("change", initRequests);
     }
 
     if (page === "consultations") {
       initConsultations();
-      const searchInput = document.getElementById("consultation-search");
       const statusFilter = document.getElementById("consultation-status-filter");
-      searchInput?.addEventListener("input", initConsultations);
       statusFilter?.addEventListener("change", initConsultations);
     }
 

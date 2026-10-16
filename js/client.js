@@ -139,9 +139,9 @@
         <header class="portal-topbar">
           <div class="topbar-leading">
             <button class="icon-button mobile-menu-button" type="button" data-action="toggle-sidebar" aria-label="Open navigation menu" aria-controls="portal-sidebar" aria-expanded="false">${icon("menu")}</button>
-            <form class="top-search" id="global-search" role="search">
+            ${["dashboard", "lawyers", "my-bookings", "reviews", "profile", "settings", "notifications"].includes(page) ? "" : `<form class="top-search" id="global-search" role="search">
               ${icon("search")}<input type="search" name="q" placeholder="Search lawyers..." aria-label="Search lawyers">
-            </form>
+            </form>`}
           </div>
           <div class="topbar-actions">
             <a class="icon-button top-notifications" href="notifications.html" aria-label="Notifications, ${unreadCount()} unread">${icon("bell")}${unreadCount() ? `<span class="unread-count" aria-hidden="true">${unreadCount()}</span>` : ""}</a>

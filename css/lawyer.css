@@ -241,6 +241,17 @@ body.lawyer-portal :focus-visible {
   color: #68788d;
 }
 
+.top-search svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
 .top-search input {
   width: 100%;
   border: 0;
@@ -387,8 +398,8 @@ body.lawyer-portal :focus-visible {
   margin-bottom: 22px;
   padding: 28px 30px;
   border-radius: 14px;
-  background: linear-gradient(110deg, #14263f 0%, #1d3b69 62%, #254e92 100%);
-  color: #fff;
+  background: #E8F6FC;
+  color: var(--navy);
   overflow: hidden;
   position: relative;
   box-shadow: var(--lawyer-shadow);
@@ -400,10 +411,10 @@ body.lawyer-portal :focus-visible {
   right: 18%;
   width: 270px;
   height: 270px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 50%;
   content: "";
-  box-shadow: 0 0 0 36px rgba(255,255,255,.03), 0 0 0 72px rgba(255,255,255,.02);
+  box-shadow: 0 0 0 36px rgba(37,99,235,.035), 0 0 0 72px rgba(37,99,235,.025);
 }
 
 .welcome-copy {
@@ -413,18 +424,19 @@ body.lawyer-portal :focus-visible {
 
 .welcome-copy .eyebrow {
   margin: 0 0 10px;
-  color: #f2d17a;
+  color: var(--blue);
 }
 
 .welcome-copy h1 {
   margin: 0 0 8px;
+  color: var(--navy);
   font-size: clamp(24px, 2.2vw, 34px);
   letter-spacing: -0.05em;
 }
 
 .welcome-copy p {
   margin: 0;
-  color: rgba(255,255,255,.82);
+  color: #465E78;
   font-size: 13px;
 }
 
@@ -434,7 +446,7 @@ body.lawyer-portal :focus-visible {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: rgba(255,255,255,.84);
+  color: #465E78;
   font-size: 12px;
   font-weight: 500;
 }
